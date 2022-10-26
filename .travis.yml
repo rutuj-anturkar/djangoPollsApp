@@ -1,18 +1,6 @@
-language: python
-
-python:
-  - 3.7
-
+anguage: python
+python:  
+  - "3.7"
+# command to install dependencies
 install:
-  - pip install -r requirements.txt
-
-before_script:
-  - python manage.py migrate
-  - python manage.py collectstatic --noinput
-
-script:
-  - black --check .
-  - flake8 .
-
-after_script:
-  - coveralls
+  - python3 -m pip install -r requirements.txt
